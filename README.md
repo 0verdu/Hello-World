@@ -152,7 +152,7 @@ Full reproduction steps: `3. Reproduction/EXPLOIT_POC.sh`
 4. Evidence/
    ├── SoC_RAM.bin               BCM firmware dump (2.0M)
    └── firmware_evidence.md      Hex dumps and verification commands
-5. Remote Exploitation/
+Remote Exploitation/
    └── Attack Chain.md           iMessage → BCM firmware weaponization analysis
 ```
 
