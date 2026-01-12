@@ -8,7 +8,7 @@
 
 iPhones using the Broadcom BCM4377/BCM4378/BCM4387 WiFi/Bluetooth combo chipsets fail to clear Low Power Mode (LPM) RAM during radio state transitions. Pre-configured BLE scan parameters and connection state persist across power cycles, DFU restores, and network resets, enabling zero-click unauthenticated CompanionLink hijacking.
 
-**Affected:** iPhone 13, 14, and 15 series (All BCMWLANCore V3.0 hardware)
+**Affected:** iPhone 13, 14, and 15 series (All BCMWLANCore V3.0 hardware) 
 **Status:** Unpatched as of 2026-01-11  
 
 ---
