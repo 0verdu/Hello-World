@@ -79,16 +79,12 @@ Connection established 5 seconds post-radio initialization. MTU=23 (no GATT nego
 **Attack surface:**
 - Adjacent network (Bluetooth range ~10m)
 - No user interaction required
-- Survives factory reset and DFU restore
+- Survives reset 
 - Bypasses code signing, SIP, sandbox (firmware-level)
 
 **Attacker capabilities:**
 - Unauthenticated L2CAP BTPipe to iOS userspace
-- XPC service injection (assistantd, mobileactivationd observed)
-- MDM enrollment without user consent
-- Configuration profile installation
-- TCC permission bypass (6+ sensors auto-granted in captured logs)
-- Network routing via iWiFi capability flag
+- XPC service injection 
 
 **Detection:** None. Exploitation occurs during state transition when logs are not accessible.
 
